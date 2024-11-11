@@ -3,142 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relebogile Chiloane - Software Developer</title>
+    <title>Relebogile Harrison Chiloane - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="home">
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Relebogile Chiloane</h1>
         <nav>
-            <div class="logo">
-                <h1>Relebogile Chiloane</h1>
-            </div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#youtube">YouTube</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="home-section">
-        <div class="intro">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-            <h1>Hi, I'm Relebogile Chiloane</h1>
-            <p>20-year-old Software Development student | Passionate about coding, tech, and learning</p>
-        </div>
-    </section>
-
+    <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am currently a first-year Software Development student at Rosebank College working towards my Diploma in Software Development. I am passionate about coding and have a deep interest in learning and developing tech solutions. I am proud to have achieved certificates in Cyber Security, Data Science, and Machine Learning from Microsoft.</p>
-            <div class="certificates">
-                <img src="rosebank-logo.jpg" alt="Rosebank College Logo" class="college-logo">
-                <img src="microsoft-logo.jpg" alt="Microsoft Certifications Logo" class="microsoft-logo">
-            </div>
-        </div>
+        <h2>About Me</h2>
+        <p>I'm Relebogile, a passionate software developer from Mpumalanga. My journey in coding started from humble beginnings, and I'm excited to keep growing and innovating in tech.</p>
+        <img src="path-to-your-image.jpg" alt="Relebogile Chiloane" class="profile-img">
     </section>
 
-   <!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
-        
-        <!-- E-Commerce Application -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-e-commerce.jpg" alt="E-Commerce Application" class="project-img">
-                <h3>E-Commerce Application</h3>
-                <p>Develop a full-stack e-commerce app with features like user authentication, product browsing, shopping cart, and order history.</p>
-                <p><strong>Tech Stack:</strong> Java (Spring Boot), Thymeleaf/JavaFX, MySQL/MongoDB</p>
-                <a href="https://demo-website.com/e-commerce" class="demo-btn" target="_blank">View Demo</a>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Repeat this structure for each project -->
+            <div class="project-card">
+                <div class="project-front">
+                    <h3>E-Commerce Application</h3>
+                    <p>Full-stack e-commerce app with essential features.</p>
+                </div>
+                <div class="project-back">
+                    <p>Tech Stack: Java (Spring Boot), Thymeleaf, MySQL.</p>
+                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
+                </div>
             </div>
+            <!-- Repeat for other projects -->
         </div>
-
-        <!-- Real-Time Chat Application -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-chat-app.jpg" alt="Real-Time Chat Application" class="project-img">
-                <h3>Real-Time Chat Application</h3>
-                <p>A Java-based chat application that supports real-time messaging and notifications. Implement features like user login, chat rooms, private messaging, and online presence indicators.</p>
-                <p><strong>Tech Stack:</strong> Java (JavaFX), WebSocket, MySQL/SQLite</p>
-                <a href="https://demo-website.com/chat" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- IoT Project: Smart Home Dashboard -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-iot.jpg" alt="Smart Home IoT Dashboard" class="project-img">
-                <h3>Smart Home IoT Dashboard</h3>
-                <p>Build a Java-based dashboard that can control and monitor IoT devices, like lighting, temperature, and security cameras, in a smart home setting.</p>
-                <p><strong>Tech Stack:</strong> Java (Spring Boot), MQTT protocol, React</p>
-                <a href="https://demo-website.com/iot-dashboard" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- Sentiment Analysis for Social Media -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-sentiment-analysis.jpg" alt="Sentiment Analysis for Social Media" class="project-img">
-                <h3>Sentiment Analysis for Social Media</h3>
-                <p>Create a Python tool that analyzes the sentiment of social media posts related to a keyword or topic. It classifies sentiment as positive, neutral, or negative and displays trends over time.</p>
-                <p><strong>Tech Stack:</strong> Python (Tweepy, TextBlob, spaCy, Matplotlib)</p>
-                <a href="https://demo-website.com/sentiment-analysis" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- Web Scraper for Data Aggregation -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-web-scraper.jpg" alt="Web Scraper for Data Aggregation" class="project-img">
-                <h3>Web Scraper for Data Aggregation</h3>
-                <p>Build a web scraper in Python to collect data from various websites like e-commerce prices, news headlines, and store the data for analysis or display.</p>
-                <p><strong>Tech Stack:</strong> Python (BeautifulSoup, Scrapy, Pandas)</p>
-                <a href="https://demo-website.com/web-scraper" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- Recommendation System for Movie/Product Suggestions -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-recommendation-system.jpg" alt="Recommendation System" class="project-img">
-                <h3>Recommendation System for Movie/Product Suggestions</h3>
-                <p>Develop a recommendation system that suggests products or movies based on user preferences or past interactions.</p>
-                <p><strong>Tech Stack:</strong> Python (scikit-learn, TensorFlow)</p>
-                <a href="https://demo-website.com/recommendation-system" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- Fitness Tracker Application -->
-        <div class="project">
-            <div class="project-info">
-                <img src="path-to-fitness-tracker.jpg" alt="Fitness Tracker Application" class="project-img">
-                <h3>Fitness Tracker Application</h3>
-                <p>Create a fitness tracker in Java that allows users to log workouts, set goals, track progress, and view analytics over time.</p>
-                <p><strong>Tech Stack:</strong> Java (Android Studio, JavaFX), Firebase/SQLite</p>
-                <a href="https://demo-website.com/fitness-tracker" class="demo-btn" target="_blank">View Demo</a>
-            </div>
-        </div>
-
-        <!-- Continue adding remaining projects (e.g., Tic-Tac-Toe, Snake and Ladder, etc.) in the same format -->
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to contact me via email or phone:</p>
-            <p>Email: <a href="mailto:relebogile.chil@gmail.com">relebogile.chil@gmail.com</a></p>
-            <p>Phone: <a href="tel:+27614944534">+27 061 494 4534</a></p>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:relebogile.chil@gmail.com">relebogile.chil@gmail.com</a></p>
+        <p>Phone: +27 61 494 4534</p>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Relebogile Chiloane</p>
-    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Top</button>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
