@@ -3,113 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relebogile Chiloane - Portfolio</title>
+    <title>Relebogile Chiloane - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header id="home">
+        <nav>
+            <div class="logo">
+                <h1>Relebogile Chiloane</h1>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navbar with Smooth Scroll Links -->
-    <nav>
-        <ul>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#projects">Personal Projects</a></li>
-            <li><a href="#youtube">YouTube</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
-
-    <!-- Dark Mode Toggle -->
-    <div class="toggle-container">
-        <label class="switchcase">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider round"></span>
-        </label>
-        <span>Dark Mode</span>
-    </div>
-
-    <!-- Hero Section (Image + Name) -->
-    <section id="hero">
-        <div class="hero-content">
-            <img src="your-image.jpg" alt="Relebogile Chiloane" class="hero-img">
-            <h1>Relebogile Chiloane</h1>
+    <section id="home-section">
+        <div class="intro">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Hi, I'm Relebogile Chiloane</h1>
+            <p>20-year-old Software Development student | Passionate about coding, tech, and learning</p>
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="aboutMe">
-        <div class="about-content">
+    <section id="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>
-                I'm a 20-year-old Software Development student at Rosebank College. I have a deep passion for coding
-                and a diverse skill set that spans across several tech fields, including Data Science, Machine Learning, and Cyber Security.
-            </p>
-            <div class="logos">
-                <img src="college-logo.png" alt="Rosebank College Logo" class="logo">
-                <img src="microsoft-cert-logo.png" alt="Microsoft Certification" class="logo">
+            <p>I am currently a first-year Software Development student at Rosebank College working towards my Diploma in Software Development. I am passionate about coding and have a deep interest in learning and developing tech solutions. I am proud to have achieved certificates in Cyber Security, Data Science, and Machine Learning from Microsoft.</p>
+            <div class="certificates">
+                <img src="rosebank-logo.jpg" alt="Rosebank College Logo" class="college-logo">
+                <img src="microsoft-logo.jpg" alt="Microsoft Certifications Logo" class="microsoft-logo">
             </div>
         </div>
     </section>
 
-    <!-- Personal Projects Section -->
     <section id="projects">
-        <h2>Personal Projects</h2>
-        <div class="projects-grid">
-            <!-- Example Project 1 -->
-            <div class="project-card">
-                <div class="project-inner">
-                    <div class="project-front">
-                        <h3>E-Commerce Application</h3>
-                    </div>
-                    <div class="project-back">
-                        <p>Develop a full-stack e-commerce app with features like user authentication, product browsing, shopping cart, checkout, and order history.</p>
-                        <p>Tech Stack: Java (Spring Boot), Thymeleaf, MySQL</p>
-                        <button><a href="demo-link" target="_blank">Demo</a></button>
-                        <button><a href="github-link" target="_blank">GitHub</a></button>
-                    </div>
-                </div>
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>E-Commerce Application</h3>
+                <p>Develop a full-stack e-commerce app with features like user authentication, product browsing, shopping cart, checkout, and order history.</p>
+                <p><strong>Tech Stack:</strong> Java (Spring Boot), Thymeleaf, MySQL/MongoDB</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/ecommerce'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
             </div>
-
-            <!-- Example Project 2 -->
-            <div class="project-card">
-                <div class="project-inner">
-                    <div class="project-front">
-                        <h3>Real-Time Chat Application</h3>
-                    </div>
-                    <div class="project-back">
-                        <p>A Java-based chat application with real-time messaging, private messaging, chat rooms, and notifications.</p>
-                        <p>Tech Stack: Java (JavaFX), WebSocket, MySQL</p>
-                        <button><a href="demo-link" target="_blank">Demo</a></button>
-                        <button><a href="github-link" target="_blank">GitHub</a></button>
-                    </div>
-                </div>
+            <div class="project">
+                <h3>Real-Time Chat Application</h3>
+                <p>A Java-based chat application that supports real-time messaging, notifications, and more.</p>
+                <p><strong>Tech Stack:</strong> Java (JavaFX), WebSocket, MySQL/SQLite</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/chatapp'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
+            </div>
+            <div class="project">
+                <h3>Smart Home IoT Dashboard</h3>
+                <p>Build a Java-based dashboard to control and monitor IoT devices like lighting and temperature in a smart home setting.</p>
+                <p><strong>Tech Stack:</strong> Java (Spring Boot), MQTT, React</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/iot-dashboard'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
+            </div>
+            <div class="project">
+                <h3>Sentiment Analysis for Social Media</h3>
+                <p>Analyze the sentiment of social media posts using NLP techniques to classify sentiments as positive, neutral, or negative.</p>
+                <p><strong>Tech Stack:</strong> Python (Tweepy, TextBlob, Matplotlib)</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/sentiment-analysis'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
+            </div>
+            <div class="project">
+                <h3>Web Scraper for Data Aggregation</h3>
+                <p>A Python web scraper to collect data from e-commerce sites and display trends or store it for analysis.</p>
+                <p><strong>Tech Stack:</strong> Python (BeautifulSoup, Pandas, SQLite)</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/webscraper'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
+            </div>
+            <div class="project">
+                <h3>Recommendation System for Movies/Products</h3>
+                <p>A recommendation system that suggests movies or products based on user preferences or past interactions.</p>
+                <p><strong>Tech Stack:</strong> Python (scikit-learn, TensorFlow)</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/recommendation-system'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
+            </div>
+            <div class="project">
+                <h3>Fitness Tracker Application</h3>
+                <p>Track workouts, progress, and set goals in a fitness tracking application.</p>
+                <p><strong>Tech Stack:</strong> Java (Android Studio or JavaFX), Firebase, MPAndroidChart</p>
+                <button onclick="window.location.href='https://github.com/yourgithub/fitnesstracker'">GitHub</button>
+                <button onclick="window.location.href='https://yourdemo.com'">Live Demo</button>
             </div>
         </div>
     </section>
 
-    <!-- YouTube Section -->
     <section id="youtube">
-        <h2>Check Out My YouTube Channel</h2>
-        <p>Here's where I share content related to software development, coding tutorials, and my journey. Feel free to subscribe!</p>
-        <a href="https://www.youtube.com/@RelebogileChiloanee" target="_blank">
-            <button>Visit My YouTube Channel</button>
-        </a>
+        <div class="container">
+            <h2>YouTube Channel</h2>
+            <p>Check out my YouTube channel for coding tutorials and projects:</p>
+            <a href="https://www.youtube.com/@RelebogileChiloanee" target="_blank">
+                <button>Visit My Channel</button>
+            </a>
+        </div>
     </section>
 
-    <!-- Contact Me Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to contact me through the following:</p>
-        <ul>
-            <li>Phone: +27 061 494 4534</li>
-            <li>Email: <a href="mailto:relebogile.chil@gmail.com">relebogile.chil@gmail.com</a></li>
-        </ul>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to contact me via email or phone:</p>
+            <p>Email: <a href="mailto:relebogile.chil@gmail.com">relebogile.chil@gmail.com</a></p>
+            <p>Phone: <a href="tel:+27614944534">+27 061 494 4534</a></p>
+        </div>
     </section>
 
-    <!-- Back-to-Top Button -->
-    <button id="topButton" title="Go to top">↑</button>
+    <footer>
+        <p>&copy; 2024 Relebogile Chiloane</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
