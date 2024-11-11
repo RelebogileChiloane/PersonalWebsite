@@ -4,127 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relebogile Harrison Chiloane - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm Relebogile, a passionate software developer from Mpumalanga...</p>
-        <img src="path-to-your-image.jpg" alt="Relebogile Chiloane" class="profile-img">
+        <p>I'm Relebogile, a software developer passionate about coding. From humble beginnings in Mpumalanga, I grew up without a PC but developed a deep love for technology. Currently, I’m studying at Rosebank College and hold 8 certifications from Cursa in data science, AI, Python, and cybersecurity.</p>
     </section>
 
-    <!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="ecommerce.jpg" alt="E-Commerce App" class="project-image">
-                    <h3>E-Commerce Application</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Full-stack app with user authentication, product browsing, shopping cart.</p>
-                    <p>Tech Stack: Java (Spring Boot), Thymeleaf, MySQL</p>
-                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
-                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2: Real-Time Chat Application -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="chat.jpg" alt="Real-Time Chat Application" class="project-image">
-                    <h3>Real-Time Chat Application</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Supports real-time messaging and notifications, with login and chat rooms.</p>
-                    <p>Tech Stack: Java (JavaFX), WebSocket, MySQL</p>
-                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
-                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Add each project here, example below -->
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <img src="ecommerce.jpg" alt="E-Commerce Application" class="project-image">
+                        <h3>E-Commerce Application</h3>
+                    </div>
+                    <div class="project-card-back">
+                        <p>Full-stack e-commerce app with user authentication, shopping cart, and order history.</p>
+                        <p><strong>Tech Stack:</strong> Java, Spring Boot, MySQL</p>
+                        <a href="https://github.com" target="_blank" class="btn">GitHub</a>
+                        <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
+                    </div>
                 </div>
             </div>
+            <!-- Repeat for each project, updating content accordingly -->
         </div>
+    </section>
 
-        <!-- Project 3: Smart Home IoT Dashboard -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="iot_dashboard.jpg" alt="Smart Home IoT Dashboard" class="project-image">
-                    <h3>Smart Home IoT Dashboard</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Monitor and control IoT devices with real-time data and alerts.</p>
-                    <p>Tech Stack: Java (Spring Boot), MQTT, React, AWS IoT</p>
-                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
-                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 4: Sentiment Analysis Tool -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="sentiment_analysis.jpg" alt="Sentiment Analysis Tool" class="project-image">
-                    <h3>Sentiment Analysis Tool</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Analyzes social media sentiment trends in real-time.</p>
-                    <p>Tech Stack: Python, Tweepy, TextBlob, Matplotlib</p>
-                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
-                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 5: Web Scraper for Data Aggregation -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="web_scraper.jpg" alt="Web Scraper for Data Aggregation" class="project-image">
-                    <h3>Web Scraper for Data Aggregation</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Collects data from websites for analysis or display.</p>
-                    <p>Tech Stack: Python, BeautifulSoup, Pandas, SQLite</p>
-                    <a href="https://github.com" target="_blank" class="btn">GitHub</a>
-                    <a href="https://demo-link.com" target="_blank" class="btn">View Demo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 6: Recommendation System -->
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <img src="recommendation.jpg" alt="Recommendation System" class="project-image">
-                    <h3>Recommendation System</h3>
-                </div>
-                <div class="project-card-back">
-                    <p>Suggests movies or products based on user preferences.</p>
-                    <p>Tech Stack: Python, scikit-learn, TensorFlow</p
-
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:relebogile.chil@gmail.com">relebogile.chil@gmail.com</a></p>
+        <p>Email: relebogile.chil@gmail.com</p>
         <p>Phone: +27 61 494 4534</p>
     </section>
+
+    <button id="back-to-top">Top</button>
 
     <script src="script.js"></script>
 </body>
 </html>
+
