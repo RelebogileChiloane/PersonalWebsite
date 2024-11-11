@@ -1,4 +1,4 @@
-// Back-to-Top Button
+// Scroll Functionality for Back-to-Top Button
 window.onscroll = function() {
     let backToTopBtn = document.getElementById("backToTop");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -11,6 +11,7 @@ window.onscroll = function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 
 // Dark Mode Toggle
 let darkModeToggle = document.createElement("button");
