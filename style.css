@@ -1,4 +1,3 @@
-
 /* Basic styles */
 body {
   font-family: Arial, sans-serif;
@@ -40,6 +39,7 @@ nav a {
   text-decoration: none;
 }
 
+/* Section styles */
 section {
   padding: 2em;
   margin: 1em auto;
@@ -75,20 +75,7 @@ section.dark-mode {
   height: auto;
 }
 
-/* Projects section */
-.projects-image {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-.projects-image img {
-  width: 80%;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
+/* Project cards for flip effect */
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -103,33 +90,29 @@ section.dark-mode {
   position: relative;
 }
 
-.project-card .card-front,
-.project-card .card-back {
+.project-card .card-front, .project-card .card-back {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   backface-visibility: hidden;
   transition: transform 0.6s;
 }
 
-.card-front {
+.project-card .card-front {
   background-color: #333;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-.card-back {
+.project-card .card-back {
+  transform: rotateY(180deg);
   background-color: #f4f4f4;
   color: #333;
-  transform: rotateY(180deg);
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -138,7 +121,35 @@ section.dark-mode {
 }
 
 .project-card:hover .card-back {
-  transform: rotateY(0);
+  transform: rotateY(0deg);
+}
+
+/* Icons for demo, GitHub, and contact section */
+.project-card .card-back a {
+  display: inline-block;
+  margin: 0.5em;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.project-card .card-back a:hover {
+  color: #007BFF;
+}
+
+/* Contact section with icons */
+#contact .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#contact .contact-info a {
+  font-size: 2em;
+  color: #333;
+}
+
+#contact .contact-info a:hover {
+  color: #007BFF;
 }
 
 /* Dark mode toggle button */
@@ -155,6 +166,14 @@ button#dark-mode-toggle {
 
 button#dark-mode-toggle:hover {
   background-color: #777;
+}
+
+/* Styling for Project Showcase Image */
+#project-showcase {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2em;
 }
 
 /* Smooth scroll */
