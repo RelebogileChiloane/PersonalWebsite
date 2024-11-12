@@ -1,3 +1,85 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+header.dark-mode {
+  background-color: #222;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+section.dark-mode {
+  background-color: #444;
+  color: #ddd;
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1em;
+}
+
+/* Education section */
+.education-entry {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.education-logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Project cards for flip effect */
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -9,6 +91,7 @@
   width: 200px;
   height: 150px;
   perspective: 1000px;
+  position: relative;
 }
 
 .project-card .card-front, .project-card .card-back {
@@ -45,106 +128,7 @@
   transform: rotateY(0deg);
 }
 
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header p {
-  margin: 0.5em 0 0;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 2em;
-  margin: 1em auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 8px;
-}
-
-section h2 {
-  color: #333;
-}
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Basic styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: white;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-header.dark-mode {
-  background-color: #222;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 2em;
-  margin: 1em auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-section.dark-mode {
-  background-color: #444;
-  color: #ddd;
-}
-
+/* Dark mode toggle button */
 button#dark-mode-toggle {
   margin-top: 1em;
   padding: 0.5em 1em;
@@ -159,28 +143,5 @@ button#dark-mode-toggle {
 button#dark-mode-toggle:hover {
   background-color: #777;
 }
-/* Profile picture */
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1em;
-}
 
-/* Education section */
-#education {
-  padding: 2em;
-}
-
-.education-entry {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.education-logo {
-  width: 80px;
-  height: auto;
-}
 
