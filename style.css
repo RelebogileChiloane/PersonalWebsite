@@ -94,29 +94,33 @@ section.dark-mode {
   position: relative;
 }
 
-.project-card .card-front, .project-card .card-back {
+.project-card .card-front,
+.project-card .card-back {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   backface-visibility: hidden;
   transition: transform 0.6s;
 }
 
-.project-card .card-front {
+.card-front {
   background-color: #333;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.project-card .card-back {
-  transform: rotateY(180deg);
+.card-back {
   background-color: #f4f4f4;
   color: #333;
+  transform: rotateY(180deg);
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -125,7 +129,7 @@ section.dark-mode {
 }
 
 .project-card:hover .card-back {
-  transform: rotateY(0deg);
+  transform: rotateY(0);
 }
 
 /* Dark mode toggle button */
