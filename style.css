@@ -1,178 +1,297 @@
-/* Basic Styles */
+/* Basic styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
+/* Dark mode styles */
 body.dark-mode {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
 }
 
-/* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
-    transition: background-color 0.3s;
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
 }
 
-/* Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-/* About & Education Section */
-#about, #education {
-    text-align: center;
-    padding: 2em;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1em;
+section {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 1em;
+  text-align: center;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1em;
 }
 
-.linkedin-icon, .github-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #333;
-    display: block;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    color: white;
-    font-size: 1.2em;
+.education-entry {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
-.linkedin-icon:hover {
-    background-color: #0a66c2;
+.education-logo {
+  width: 80px;
+  height: auto;
 }
 
-.github-icon:hover {
-    background-color: #333;
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1em;
 }
 
-/* Projects Section */
+.linkedin, .github {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: #0077b5; /* LinkedIn color */
+  border-radius: 50%;
+}
+
+.github {
+  background-color: #333; /* GitHub color */
+}
+
+/* Projects */
 .project-card-container {
-    display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-card {
-    width: 200px;
-    height: 150px;
-    perspective: 1000px;
-    position: relative;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 100px;
+  background-color: #ddd;
+  margin-bottom: 1em;
 }
 
 .project-card .card-front, .project-card .card-back {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
 }
 
 .project-card .card-front {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
 }
 
 .project-card .card-back {
-    transform: rotateY(180deg);
-    background-color: #f4f4f4;
-    color: #333;
-    flex-direction: column;
-    text-align: center;
+  transform: rotateY(180deg);
+  background-color: #f4f4f4;
+  color: #333;
+  flex-direction: column;
+  text-align: center;
 }
 
 .project-card:hover .card-front {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .project-card:hover .card-back {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
-/* Contact Section */
-#contact .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+.project-card a {
+  color: #333;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+/* Contact section */
+.contact-info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1em;
 }
 
-.phone-icon, .email-icon {
-    width: 24px;
-    height: 24px;
-    background-color: #333;
-    mask: url('phone-icon.svg') center / contain no-repeat;
+.email, .phone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.email-icon {
-    background-color: #d44638;
-    mask: url('email-icon.svg') center / contain no-repeat;
-}
+.email {
+  background: url('https://img.icons8.com/ios-filled/50/Here is the final **HTML** and **CSS** code with all the features you requested, including:
 
-.contact-item p {
-    font-size: 1.2em;
-}
+1. **Icons under the About Me section (LinkedIn and GitHub).**
+2. **Project cards with image slots above the project name, which flip to show tech stack, demo, and GitHub links.**
+3. **Centered "Projects" and "Contact" headings.**
+4. **Contact icons designed using HTML and CSS.**
 
-/* Dark Mode Toggle Button */
-button#dark-mode-toggle {
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    border: none;
-    background-color: #555;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+### HTML
 
-button#dark-mode-toggle:hover {
-    background-color: #777;
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relebogile Chiloane Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Relebogile Chiloane</h1>
+    <p>First Year - Diploma in Software Development at Rosebank College</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </header>
 
+  <section id="about">
+    <img src="profile.jpg" alt="Relebogile Chiloane" class="profile-pic">
+    <h2>About Me</h2>
+    <p>Welcome! I'm Relebogile, a first-year student at Rosebank College pursuing a Diploma in Software Development. I have a passion for creating web and software solutions and am eager to learn and grow in the tech industry.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com" target="_blank" class="linkedin"></a>
+      <a href="https://github.com" target="_blank" class="github"></a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-entry">
+      <img src="rosebank-college-logo.png" alt="Rosebank College Logo" class="education-logo">
+      <div>
+        <h3>Rosebank College</h3>
+        <p>Diploma in Software Development</p>
+        <p>2023 - Present</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card-container">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="chat-app-image.jpg" alt="Real-Time Chat App">
+        </div>
+        <div class="card-front">
+          <h3>Real-Time Chat App</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: Node.js, Socket.io, MongoDB</p>
+          <a href="https://chatapp-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/chat-app" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="iot-dashboard.jpg" alt="Smart Home IoT Dashboard">
+        </div>
+        <div class="card-front">
+          <h3>Smart Home IoT Dashboard</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: React, Node.js, MongoDB, AWS IoT</p>
+          <a href="https://iot-dashboard-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/iot-dashboard" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="sentiment-analysis.jpg" alt="Sentiment Analysis for Social Media">
+        </div>
+        <div class="card-front">
+          <h3>Sentiment Analysis for Social Media</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: React, PostgreSQL, TensorFlow, Python</p>
+          <a href="https://sentiment-analysis-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/sentiment-analysis" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="tic-tac-toe.jpg" alt="Tic-Tac-Toe with AI">
+        </div>
+        <div class="card-front">
+          <h3>Tic-Tac-Toe with AI</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: Minimax Algorithm, Alpha-Beta Pruning, Node.js</p>
+          <a href="https://tic-tac-toe-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/tic-tac-toe" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <a href="mailto:relebogile.chil@gmail.com" class="email"></a>
+      <a href="tel:+27614944534" class="phone"></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
