@@ -1,14 +1,11 @@
-/* Basic styles */
+/* Basic Styles */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   color: #333;
   background-color: #f4f4f4;
   transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-  background-color: #333;
-  color: white;
 }
 
 header {
@@ -31,26 +28,25 @@ nav a {
   text-decoration: none;
 }
 
-section {
-  padding: 2em;
-  margin: 1em auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 8px;
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
 }
 
-section.dark-mode {
-  background-color: #444;
-  color: #ddd;
+.linkedin-icon {
+  background: #0a66c2;
+  mask: url('linkedin-icon.svg') center / contain no-repeat;
 }
 
-.project-showcase-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1em;
+.github-icon {
+  background: #333;
+  mask: url('github-icon.svg') center / contain no-repeat;
 }
 
+/* Project Cards */
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -60,7 +56,7 @@ section.dark-mode {
 
 .project-card {
   width: 200px;
-  height: 150px;
+  height: 300px;
   perspective: 1000px;
   position: relative;
 }
@@ -69,26 +65,35 @@ section.dark-mode {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   backface-visibility: hidden;
   transition: transform 0.6s;
+  text-align: center;
 }
 
 .project-card .card-front {
   background-color: #333;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card .project-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
 }
 
 .project-card .card-back {
   transform: rotateY(180deg);
   background-color: #f4f4f4;
   color: #333;
+  display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-card:hover .card-front {
@@ -99,100 +104,40 @@ section.dark-mode {
   transform: rotateY(0deg);
 }
 
-/* Social links under About */
-.social-links {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  margin-top: 1em;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
+.project-button {
   display: inline-block;
-  position: relative;
-}
-
-/* LinkedIn Icon */
-.linkedin-icon {
-  background-color: #0A66C2;
-  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
-  display: inline-block;
-}
-
-/* GitHub Icon */
-.github-icon {
-  width: 35px;
-  height: 35px;
-  border: 2px solid #333;
+  margin-top: 10px;
+  padding: 5px 10px;
   background-color: #333;
-  clip-path: circle(50%);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
-/* Demo Icon (Play Button) */
-.demo-icon {
-  width: 25px;
-  height: 25px;
-  background-color: #3BB54A;
-  clip-path: polygon(10% 0%, 100% 50%, 10% 100%);
-  display: inline-block;
-}
-
-/* Contact icons */
-.contact-icon-container {
+/* Contact Icons */
+.contact-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 1em;
 }
 
-.icon-item {
+.contact-item {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
 
-/* Phone Icon */
+.phone-icon, .email-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .phone-icon {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background-color: white;
-  position: relative;
+  background: #333;
+  mask: url('phone-icon.svg') center / contain no-repeat;
 }
 
-.phone-icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 6px;
-  background-color: #333;
-  border-radius: 3px;
-}
-
-/* Email Icon */
 .email-icon {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #333;
-  background-color: #D44638;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 60%);
-  position: relative;
-}
-
-.email-icon::before {
-  content: "";
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 8px;
-  background-color: #333;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: #d44638;
+  mask: url('email-icon.svg') center / contain no-repeat;
 }
