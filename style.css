@@ -1,191 +1,178 @@
 /* Basic Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
-  transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* Header */
 header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
+/* Navigation */
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
-/* Social Icons */
-.social-links a {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin: 0 8px;
+/* About & Education Section */
+#about, #education {
+    text-align: center;
+    padding: 2em;
 }
 
-.linkedin-icon {
-  background: #0a66c2;
-  mask: url('linkedin-icon.svg') center / contain no-repeat;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
 }
 
-.github-icon {
-  background: #333;
-  mask: url('github-icon.svg') center / contain no-repeat;
+h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
 }
 
-/* Basic Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
-  transition: background-color 0.3s, color 0.3s;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
+.linkedin-icon, .github-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 1.2em;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+.linkedin-icon:hover {
+    background-color: #0a66c2;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+.github-icon:hover {
+    background-color: #333;
 }
 
-/* Social Icons */
-.social-links a {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin: 0 8px;
-}
-
-.linkedin-icon {
-  background: #0a66c2;
-  mask: url('linkedin-icon.svg') center / contain no-repeat;
-}
-
-.github-icon {
-  background: #333;
-  mask: url('github-icon.svg') center / contain no-repeat;
-}
-
-/* Project Cards */
+/* Projects Section */
 .project-card-container {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-  position: relative;
+    width: 200px;
+    height: 150px;
+    perspective: 1000px;
+    position: relative;
 }
 
 .project-card .card-front, .project-card .card-back {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: absolute;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
 }
 
 .project-card .card-front {
-  background-color: #333;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-card .project-image {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
+    background-color: #333;
+    color: white;
 }
 
 .project-card .card-back {
-  transform: rotateY(180deg);
-  background-color: #f4f4f4;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    transform: rotateY(180deg);
+    background-color: #f4f4f4;
+    color: #333;
+    flex-direction: column;
+    text-align: center;
 }
 
 .project-card:hover .card-front {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .project-card:hover .card-back {
-  transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
-.project-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-/* Contact Icons */
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+/* Contact Section */
+#contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
 .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .phone-icon, .email-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.phone-icon {
-  background: #333;
-  mask: url('phone-icon.svg') center / contain no-repeat;
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    mask: url('phone-icon.svg') center / contain no-repeat;
 }
 
 .email-icon {
-  background: #d44638;
-  mask: url('email-icon.svg') center / contain no-repeat;
+    background-color: #d44638;
+    mask: url('email-icon.svg') center / contain no-repeat;
 }
+
+.contact-item p {
+    font-size: 1.2em;
+}
+
+/* Dark Mode Toggle Button */
+button#dark-mode-toggle {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button#dark-mode-toggle:hover {
+    background-color: #777;
+}
+
