@@ -8,11 +8,18 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
 header {
   background-color: #333;
   color: white;
   padding: 1em;
   text-align: center;
+  transition: background-color 0.3s;
 }
 
 nav ul {
@@ -37,7 +44,6 @@ section {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Profile picture */
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -46,19 +52,6 @@ section {
   margin: 0 auto 1em;
 }
 
-/* Education section */
-.education-entry {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.education-logo {
-  width: 80px;
-  height: auto;
-}
-
-/* Project cards */
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -107,78 +100,74 @@ section {
   transform: rotateY(0deg);
 }
 
-/* Icons for Contact */
-.contact-icon-container {
+/* Social link icons */
+.social-links {
   display: flex;
   gap: 1em;
   justify-content: center;
-  padding-top: 10px;
+  margin-top: 1em;
 }
 
+.icon.linkedin-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #0A66C2;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  position: relative;
+}
+
+.linkedin-icon a::before {
+  content: "in";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+}
+
+.icon.github-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+.github-icon a::before {
+  content: "{ }";
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 18px;
+}
+
+/* Contact icons */
+.contact-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.phone-icon, .email-icon, .linkedin-icon, .github-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Demo icon */
 .demo-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #333;
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-.github-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #333;
-  clip-path: polygon(50% 0%, 80% 0%, 100% 20%, 80% 40%, 100% 60%, 80% 80%, 50% 100%, 20% 80%, 0% 60%, 20% 40%, 0% 20%);
+  width: 25px;
+  height: 25px;
+  background-color: #3BB54A;
+  clip-path: polygon(10% 0%, 100% 50%, 10% 100%);
   position: relative;
 }
-
-.github-icon::after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border-radius: 50%;
-}
-
-.email-icon {
-  width: 30px;
-  height: 20px;
-  background-color: #DB4437;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-  position: relative;
-}
-
-.email-icon::before, .email-icon::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  width: 20px;
-  height: 2px;
-  background-color: white;
-}
-
-.email-icon::before { left: 5px; transform: rotate(45deg); }
-.email-icon::after { right: 5px; transform: rotate(-45deg); }
-
-.phone-icon {
-  width: 30px;
-  height: 30px;
-  background-color: #34B7F1;
-  clip-path: circle(50%);
-  position: relative;
-}
-
-.phone-icon::after {
-  content: '';
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px #34B7F1;
-}
-
-
