@@ -52,6 +52,13 @@ section {
   margin: 0 auto 1em;
 }
 
+.project-showcase-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -108,7 +115,7 @@ section {
   margin-top: 1em;
 }
 
-.icon.linkedin-icon {
+.icon.linkedin-icon, .icon.github-icon {
   width: 40px;
   height: 40px;
   background-color: #0A66C2;
@@ -116,32 +123,13 @@ section {
   position: relative;
 }
 
-.linkedin-icon a::before {
-  content: "in";
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 18px;
-}
-
-.icon.github-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  border-radius: 50%;
+/* Demo icon */
+.demo-icon {
+  width: 25px;
+  height: 25px;
+  background-color: #3BB54A;
+  clip-path: polygon(10% 0%, 100% 50%, 10% 100%);
   position: relative;
-}
-
-.github-icon a::before {
-  content: "{ }";
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  font-size: 18px;
 }
 
 /* Contact icons */
@@ -159,15 +147,204 @@ section {
 }
 
 .phone-icon, .email-icon, .linkedin-icon, .github-icon {
-  width: 30px;
-  height: 30px;
+ I've made adjustments to keep your code streamlined, fixing the contact section and ensuring all projects and icons display correctly. This will ensure the "Contact Me" section has icons for each method, while all four projects appear under "Projects" with icons for "Demo" and "GitHub." Here's the updated code, including an HTML play button, LinkedIn, GitHub, email, and phone icons.
+
+### Updated CSS Code:
+
+```css
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Demo icon */
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  margin: 1em auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.project-showcase-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.project-card-container {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  width: 200px;
+  height: 150px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.project-card .card-front, .project-card .card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.project-card .card-front {
+  background-color: #333;
+  color: white;
+}
+
+.project-card .card-back {
+  transform: rotateY(180deg);
+  background-color: #f4f4f4;
+  color: #333;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.project-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Social link icons */
+.social-links {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.linkedin-icon {
+  background-color: #0A66C2;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+}
+
+.github-icon {
+  background-color: #333;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .demo-icon {
   width: 25px;
   height: 25px;
   background-color: #3BB54A;
   clip-path: polygon(10% 0%, 100% 50%, 10% 100%);
+}
+
+/* Contact icons */
+.contact-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.phone-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 5px;
   position: relative;
+  background-color: white;
+}
+
+.phone-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+}
+
+.email-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  background-color: #D44638;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 60%);
+  position: relative;
+}
+
+.email-icon::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 8px;
+  background-color: #333;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
