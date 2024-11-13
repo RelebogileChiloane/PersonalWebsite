@@ -46,6 +46,54 @@ nav a {
   mask: url('github-icon.svg') center / contain no-repeat;
 }
 
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.linkedin-icon {
+  background: #0a66c2;
+  mask: url('linkedin-icon.svg') center / contain no-repeat;
+}
+
+.github-icon {
+  background: #333;
+  mask: url('github-icon.svg') center / contain no-repeat;
+}
+
 /* Project Cards */
 .project-card-container {
   display: flex;
