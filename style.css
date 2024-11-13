@@ -8,22 +8,11 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: white;
-}
-
 header {
   background-color: #333;
   color: white;
   padding: 1em;
   text-align: center;
-  transition: background-color 0.3s;
-}
-
-header.dark-mode {
-  background-color: #222;
 }
 
 nav ul {
@@ -48,11 +37,6 @@ section {
   transition: background-color 0.3s, color 0.3s;
 }
 
-section.dark-mode {
-  background-color: #444;
-  color: #ddd;
-}
-
 /* Profile picture */
 .profile-pic {
   width: 150px;
@@ -74,7 +58,7 @@ section.dark-mode {
   height: auto;
 }
 
-/* Project cards for flip effect */
+/* Project cards */
 .project-card-container {
   display: flex;
   gap: 1em;
@@ -123,98 +107,78 @@ section.dark-mode {
   transform: rotateY(0deg);
 }
 
-/* Icons */
+/* Icons for Contact */
+.contact-icon-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding-top: 10px;
+}
+
 .demo-icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: #333;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  display: inline-block;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
 .github-icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: #333;
   clip-path: polygon(50% 0%, 80% 0%, 100% 20%, 80% 40%, 100% 60%, 80% 80%, 50% 100%, 20% 80%, 0% 60%, 20% 40%, 0% 20%);
-  display: inline-block;
   position: relative;
 }
 
 .github-icon::after {
   content: '';
   position: absolute;
-  top: 18px;
-  left: 10px;
-  width: 30px;
-  height: 10px;
+  top: 7px;
+  left: 7px;
+  width: 15px;
+  height: 15px;
   background-color: white;
+  border-radius: 50%;
 }
 
 .email-icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 20px;
   background-color: #DB4437;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
   position: relative;
 }
 
 .email-icon::before, .email-icon::after {
   content: '';
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 10px;
+  top: 5px;
+  width: 20px;
+  height: 2px;
   background-color: white;
 }
 
+.email-icon::before { left: 5px; transform: rotate(45deg); }
+.email-icon::after { right: 5px; transform: rotate(-45deg); }
+
 .phone-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #34b7f1;
+  width: 30px;
+  height: 30px;
+  background-color: #34B7F1;
   clip-path: circle(50%);
-  display: inline-block;
   position: relative;
 }
 
 .phone-icon::after {
   content: '';
   position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 20px;
-  height: 2px;
+  top: 9px;
+  left: 9px;
+  width: 10px;
+  height: 10px;
   background-color: white;
-  transform: rotate(45deg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #34B7F1;
 }
 
-.phone-icon::before {
-  content: '';
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 20px;
-  height: 2px;
-  background-color: white;
-  transform: rotate(-45deg);
-}
 
-.projects-image {
-  background-image: url('project-showcase.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  margin-bottom: 2em;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: space-around;
-  gap: 1em;
-}
-
-.contact-info a {
-  display: inline-block;
-}
