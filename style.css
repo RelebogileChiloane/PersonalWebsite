@@ -162,7 +162,128 @@ h2 {
 
 .email, .phone {
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-block;
-}
+ Here's the updated **HTML and CSS** code for your portfolio:
+
+### **HTML**:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relebogile Chiloane Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Relebogile Chiloane</h1>
+    <p>First Year - Diploma in Software Development at Rosebank College</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </header>
+
+  <section id="about">
+    <img src="profile.jpg" alt="Relebogile Chiloane" class="profile-pic">
+    <h2>About Me</h2>
+    <p>Welcome! I'm Relebogile, a first-year student at Rosebank College pursuing a Diploma in Software Development. I have a passion for creating web and software solutions and am eager to learn and grow in the tech industry.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com" target="_blank" class="linkedin"></a>
+      <a href="https://github.com" target="_blank" class="github"></a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-entry">
+      <img src="rosebank-college-logo.png" alt="Rosebank College Logo" class="education-logo">
+      <div>
+        <h3>Rosebank College</h3>
+        <p>Diploma in Software Development</p>
+        <p>2023 - Present</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card-container">
+      <!-- Real-Time Chat App -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="chat-app-image.jpg" alt="Real-Time Chat App">
+        </div>
+        <div class="card-front">
+          <h3>Real-Time Chat App</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: Node.js, Socket.io, MongoDB</p>
+          <a href="https://chatapp-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/chat-app" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Smart Home IoT Dashboard -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="iot-dashboard.jpg" alt="Smart Home IoT Dashboard">
+        </div>
+        <div class="card-front">
+          <h3>Smart Home IoT Dashboard</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: React, Node.js, MongoDB, AWS IoT</p>
+          <a href="https://iot-dashboard-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/iot-dashboard" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Sentiment Analysis -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="sentiment-analysis.jpg" alt="Sentiment Analysis for Social Media">
+        </div>
+        <div class="card-front">
+          <h3>Sentiment Analysis for Social Media</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: React, PostgreSQL, TensorFlow, Python</p>
+          <a href="https://sentiment-analysis-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/sentiment-analysis" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Tic-Tac-Toe with AI -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="tic-tac-toe.jpg" alt="Tic-Tac-Toe with AI">
+        </div>
+        <div class="card-front">
+          <h3>Tic-Tac-Toe with AI</h3>
+        </div>
+        <div class="card-back">
+          <p>Tech Stack: Minimax Algorithm, Alpha-Beta Pruning, Node.js</p>
+          <a href="https://tic-tac-toe-demo.com" target="_blank">Demo</a>
+          <a href="https://github.com/username/tic-tac-toe" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <a href="mailto:relebogile.chil@gmail.com" class="email"></a>
+      <a href="tel:+27614944534" class="phone"></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
