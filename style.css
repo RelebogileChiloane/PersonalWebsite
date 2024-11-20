@@ -165,19 +165,43 @@ button#dark-mode-toggle:hover {
   background-color: #777;
 }
 
-/* Contact section styles */
-.contact-info {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 2em;
-}
+ <!-- Contact Me Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-cards">
+                <!-- Email Card -->
+                <div class="info-card">
+                    <div class="card-content">
+                        <div class="icon-container">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>relebogile.chil@gmail.com</p>
+                        <a href="mailto:relebogile.chil@gmail.com">Send an Email</a>
+                    </div>
+                </div>
+                <!-- Phone Card -->
+                <div class="info-card">
+                    <div class="card-content">
+                        <div class="icon-container">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+27 61 494 4534</p>
+                        <a href="tel:+27614944534">Call Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.contact-info p {
-  font-size: 1.2em;
-  margin: 0.5em 0;
-}
-
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Relebogile Harrison Chiloane. All rights reserved.</p>
+        </div>
+    </footer>
 /* YouTube section */
 .youtube-section {
   text-align: center;
