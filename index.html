@@ -4,9 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relebogile Chiloane Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #333;
+            color: white;
+        }
+
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #0077B5;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .sticky-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        .sticky-nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .sticky-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dark Mode Icon */
+        .dark-mode-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .moon-icon::before {
+            content: "🌙"; /* Moon icon for dark mode */
+        }
+
+        .sun-icon::before {
+            content: "☀️"; /* Sun icon for light mode */
+        }
+
+        /* About Section */
+        #about {
+            padding: 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        /* Project Section */
+        .project-card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .card-front, .card-back {
+            padding: 15px;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-back {
+            display: none;
+        }
+
+        .project-card:hover .card-back {
+            display: block;
+        }
+
+        /* More Info Section */
+        .more-info-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .info-card {
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .github-logo, .linkedin-logo {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+
+        .github-logo {
+            background-image: url('github-logo.png');
+        }
+
+        .linkedin-logo {
+            background-image: url('linkedin-logo.png');
+        }
+
+        /* Contact Section */
+        .contact-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .email-logo, .phone-logo {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+
+        .email-logo {
+            background-image: url('gmail-logo.png');
+        }
+
+        .phone-logo {
+            background-image: url('landline-logo.png');
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 5px solid white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <div class="profile-container">
@@ -67,7 +230,7 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-card-container">
-            <!-- Project 1 -->
+            <!-- Add All 12 Projects -->
             <div class="project-card">
                 <div class="card-front">
                     <img src="project1-image.jpg" alt="Project 1">
@@ -81,128 +244,28 @@
                 </div>
             </div>
 
-            <!-- Project Placeholders (12 total) -->
-            <!-- Add placeholders for projects 2 to 12 -->
+            <!-- 11 More Projects (Placeholders) -->
             <div class="project-card">
                 <div class="card-front">
                     <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 2</h3>
+                    <h3>Project 2</h3>
                 </div>
                 <div class="card-back">
-                    <h3>Project Placeholder 2</h3>
+                    <h3>Project 2</h3>
                     <p>Details coming soon!</p>
                 </div>
             </div>
-
             <div class="project-card">
                 <div class="card-front">
                     <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 3</h3>
+                    <h3>Project 3</h3>
                 </div>
                 <div class="card-back">
-                    <h3>Project Placeholder 3</h3>
+                    <h3>Project 3</h3>
                     <p>Details coming soon!</p>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 4</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 4</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 5</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 5</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 6</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 6</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 7</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 7</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 8</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 8</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 9</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 9</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 10</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 10</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 11</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 11</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-front">
-                    <img src="placeholder.jpg" alt="Placeholder Project">
-                    <h3>Project Placeholder 12</h3>
-                </div>
-                <div class="card-back">
-                    <h3>Project Placeholder 12</h3>
-                    <p>Details coming soon!</p>
-                </div>
-            </div>
+            <!-- Repeat this pattern for the remaining 9 placeholders -->
         </div>
     </section>
 
@@ -229,15 +292,48 @@
                 <div class="linkedin-logo"></div>
                 <h3>LinkedIn</h3>
                 <p>Connect with me.</p>
-                <a href="https://www.linkedin.com/in/relebogile-chiloane/">Visit LinkedIn</a>
+                <a href="https://www.linkedin.com/in/relebogile-chiloane-7006b7323">Visit LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-cards">
+            <div class="info-card">
+                <div class="email-logo"></div>
+                <h3>Email</h3>
+                <p>relebogile.chil@gmail.com</p>
+                <a href="mailto:relebogile.chil@gmail.com">Send an Email</a>
+            </div>
+            <div class="info-card">
+                <div class="phone-logo"></div>
+                <h3>Phone</h3>
+                <p>+27 61 494 4534</p>
+                <a href="tel:+27614944534">Call Me</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Relebogile Chiloane | All Rights Reserved</p>
+        <p>&copy; 2024 Relebogile Harrison Chiloane. All rights reserved.</p>
     </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                darkModeToggle.classList.remove("moon-icon");
+                darkModeToggle.classList.add("sun-icon");
+            } else {
+                darkModeToggle.classList.remove("sun-icon");
+                darkModeToggle.classList.add("moon-icon");
+            }
+        });
+    </script>
 
 </body>
 </html>
