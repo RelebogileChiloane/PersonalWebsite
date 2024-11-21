@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Relebogile Chiloane</h1>
-    <p>First Year Student - Diploma in Software Development at Rosebank College</p>
-    <p>Matric Graduate</p>
-    <nav>
+    <div class="profile-container">
+      <img src="profile.jpg" alt="Relebogile Chiloane" class="profile-pic">
+      <h1>Relebogile Chiloane</h1>
+      <p>First Year Student - Diploma in Software Development at Rosebank College</p>
+      <p>Matric Graduate</p>
+    </div>
+    <nav class="sticky-nav">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -20,15 +24,16 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <div id="dark-mode-toggle" class="dark-mode-icon moon-icon"></div>
   </header>
 
+  <!-- About Section -->
   <section id="about">
-    <img src="profile.jpg" alt="Relebogile Chiloane" class="profile-pic">
     <h2>About Me</h2>
     <p>Welcome! I'm Relebogile, a first-year student at Rosebank College pursuing a Diploma in Software Development. I have a passion for creating web and software solutions and am eager to learn and grow in the tech industry.</p>
   </section>
 
+  <!-- Education Section -->
   <section id="education">
     <h2>Education</h2>
     <div class="education-entry">
@@ -57,165 +62,86 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
-  <h2>Projects</h2>
-  <div class="project-card-container">
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="project1-image.jpg" alt="Real-Time Chat App">
-      </div>
-      <div class="card-front">
-        <h3>Real-Time Chat App</h3>
-      </div>
-      <div class="card-back">
-        <p>Tech Stack: Node.js, Socket.io, MongoDB</p>
-        <a href="https://chatapp-demo.com" target="_blank" class="demo-button">Demo</a>
-        <a href="https://github.com/username/chat-app" target="_blank" class="github-button">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="project2-image.jpg" alt="Smart Home Dashboard">
-      </div>
-      <div class="card-front">
-        <h3>Smart Home IoT Dashboard</h3>
-      </div>
-      <div class="card-back">
-        <p>Tech Stack: React, Node.js, MongoDB, AWS IoT</p>
-        <a href="https://iot-dashboard-demo.com" target="_blank" class="demo-button">Demo</a>
-        <a href="https://github.com/username/smart-home" target="_blank" class="github-button">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="project3-image.jpg" alt="Sentiment Analysis for Social Media">
-      </div>
-      <div class="card-front">
-        <h3>Sentiment Analysis for Social Media</h3>
-      </div>
-      <div class="card-back">
-        <p>Tech Stack: React, PostgreSQL, TensorFlow, Python</p>
-        <a href="https://sentiment-demo.com" target="_blank" class="demo-button">Demo</a>
-        <a href="https://github.com/username/sentiment-analysis" target="_blank" class="github-button">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="project4-image.jpg" alt="Tic-Tac-Toe(AI)">
-      </div>
-      <div class="card-front">
-        <h3>Tic-Tac-Toe with AI</h3>
-      </div>
-      <div class="card-back">
-        <p>Tech Stack: Minimax Algorithm, Alpha-Beta Pruning, Node.js</p>
-        <a href="https://tictactoe-demo.com" target="_blank" class="demo-button">Demo</a>
-        <a href="https://github.com/username/tictactoe" target="_blank" class="github-button">GitHub</a>
-      </div>
-    </div>
-
-    <!-- Placeholder for 5 more projects -->
-    <div class="project-card">
-      <div class="project-image">
-        <img src="placeholder-image.jpg" alt="Project Placeholder">
-      </div>
-      <div class="card-front">
-        <h3>Project Placeholder 1</h3>
-      </div>
-      <div class="card-back">
-        <p>Details coming soon!</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="placeholder-image.jpg" alt="Project Placeholder">
-      </div>
-      <div class="card-front">
-        <h3>Project Placeholder 2</h3>
-      </div>
-      <div class="card-back">
-        <p>Details coming soon!</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="placeholder-image.jpg" alt="Project Placeholder">
-      </div>
-      <div class="card-front">
-        <h3>Project Placeholder 3</h3>
-      </div>
-      <div class="card-back">
-        <p>Details coming soon!</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="placeholder-image.jpg" alt="Project Placeholder">
-      </div>
-      <div class="card-front">
-        <h3>Project Placeholder 4</h3>
-      </div>
-      <div class="card-back">
-        <p>Details coming soon!</p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="placeholder-image.jpg" alt="Project Placeholder">
-      </div>
-      <div class="card-front">
-        <h3>Project Placeholder 5</h3>
-      </div>
-      <div class="card-back">
-        <p>Details coming soon!</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="more-info">
-    <h2>More Information</h2>
-    <div class="info-card">
-      <div class="github-logo">
-        <div class="circle">
-          <div class="octocat"></div>
+    <h2>Projects</h2>
+    <div class="project-card-container">
+      <!-- Example Projects -->
+      <div class="project-card">
+        <div class="card-front">
+          <img src="project1-image.jpg" alt="Real-Time Chat App">
+          <h3>Real-Time Chat App</h3>
+        </div>
+        <div class="card-back">
+          <h3>Real-Time Chat App</h3>
+          <p>Tech Stack: Node.js, Socket.io, MongoDB</p>
+          <a href="#" target="_blank" class="demo-button">Demo</a>
+          <a href="#" target="_blank" class="github-button">GitHub</a>
         </div>
       </div>
-      <h3>GitHub</h3>
-      <p>Explore my projects and contributions.</p>
-      <a href="https://github.com/RelebogileChiloanee" target="_blank">Visit GitHub</a>
-    </div>
-    <div class="info-card">
-      <div class="linkedin-logo">
-        <div class="circle">
-          <span class="linkedin-text">in</span>
+      <!-- Placeholder Projects -->
+      <div class="project-card">
+        <div class="card-front">
+          <img src="placeholder-image.jpg" alt="Placeholder">
+          <h3>Project Placeholder 1</h3>
+        </div>
+        <div class="card-back">
+          <h3>Project Placeholder 1</h3>
+          <p>Details coming soon!</p>
         </div>
       </div>
-      <h3>LinkedIn</h3>
-      <p>Connect with me professionally.</p>
-      <a href="https://www.linkedin.com/in/relebogile-chiloane-7006b7323" target="_blank">Visit LinkedIn</a>
     </div>
   </section>
 
+  <!-- YouTube Section -->
+  <section id="youtube">
+    <h2>YouTube Content</h2>
+    <div class="youtube-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-cards">
+      <div class="info-card">
+        <div class="email-logo">
+          <div class="envelope"></div>
+        </div>
+        <h3>Email</h3>
+        <p>relebogile.chil@gmail.com</p>
+        <a href="mailto:relebogile.chil@gmail.com">Send an Email</a>
+      </div>
+      <div class="info-card">
+        <div class="phone-logo">
+          <div class="phone-body"></div>
+        </div>
+        <h3>Phone</h3>
+        <p>+27 61 494 4534</p>
+        <a href="tel:+27614944534">Call Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Relebogile Harrison Chiloane. All rights reserved.</p>
   </footer>
 
   <script>
+    // Dark Mode Toggle
     const darkModeToggle = document.getElementById("dark-mode-toggle");
+
     darkModeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
-      document.querySelectorAll("section, header, footer").forEach(section => section.classList.toggle("dark-mode"));
+      if (document.body.classList.contains("dark-mode")) {
+        darkModeToggle.classList.remove("moon-icon");
+        darkModeToggle.classList.add("sun-icon");
+      } else {
+        darkModeToggle.classList.remove("sun-icon");
+        darkModeToggle.classList.add("moon-icon");
+      }
     });
   </script>
 </body>
