@@ -2,16 +2,23 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-mode {
-  background-color: #333;
+  background: #333;
   color: white;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: #0077B5;
+  z-index: 1000;
 }
 
 /* Header */
@@ -238,18 +245,10 @@ section p {
   cursor: pointer;
 }
 
-.dark-mode-icon.moon-icon::after {
-  content: '';
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border-radius: 50%;
+/* Dark Mode Icon */
+.dark-mode-icon.moon-icon {
+  /* Moon Style */
 }
-
-.dark-mode-icon.sun-icon::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: yellow;
-  border-radius: 50%;
+.dark-mode-icon.sun-icon {
+  /* Sun Style */
 }
