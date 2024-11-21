@@ -1,11 +1,42 @@
-nav {
-  background: #007BFF;
-  padding: 10px;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header.dark-mode, footer.dark-mode {
+  background-color: #222;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 1em;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
 }
 
@@ -13,122 +44,36 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
-/* Basic styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f4f4f4;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: white;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-header.dark-mode {
-  background-color: #222;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 2em;
-  margin: 1em auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-section.dark-mode {
-  background-color: #444;
-  color: #ddd;
-}
-
-/* Profile picture */
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1em;
-}
-
-/* Education section */
-.education-entry {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.education-logo {
-  width: 80px;
-  height: auto;
-}
-/* Education section */
-.education-entry {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-
-.education-logo {
-  width: 80px;
-  height: auto;
-}
-
-/* Project cards for flip effect */
+/* Projects Section */
 .project-card-container {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
 }
 
 .project-card {
-  width: 200px;
-  height: 250px;
-  perspective: 1000px;
   position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: auto;
 }
 
-.project-card .card-front,
-.project-card .card-back {
+.project-card .card-front, .project-card .card-back {
+  position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #fff;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card .card-front {
@@ -137,11 +82,9 @@ section.dark-mode {
 }
 
 .project-card .card-back {
-  transform: rotateY(180deg);
   background-color: #f4f4f4;
   color: #333;
-  flex-direction: column;
-  text-align: center;
+  transform: rotateY(180deg);
 }
 
 .project-card:hover .card-front {
@@ -149,280 +92,164 @@ section.dark-mode {
 }
 
 .project-card:hover .card-back {
-  transform: rotateY(0deg);
+  transform: rotateY(0);
 }
 
-/* Icons styles */
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
+.project-card .project-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
-.icon {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
+/* Education Section */
+.education-entry {
   display: flex;
   align-items: center;
+  gap: 1em;
+  padding: 1em 0;
+  transition: transform 0.3s ease;
+}
+
+.education-entry:hover {
+  transform: scale(1.1);
+}
+
+.education-logo {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.education-entry:hover .education-logo {
+  transform: scale(1.2);
+}
+
+.education-entry div h3, .education-entry div p {
+  transition: font-size 0.3s ease;
+}
+
+.education-entry:hover div h3 {
+  font-size: 1.5rem;
+}
+
+.education-entry:hover div p {
+  font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
   justify-content: center;
-  border-radius: 50%;
-  color: white;
-}
-
-.icon a {
-  color: white;
-  font-size: 1.5em;
-  text-decoration: none;
-}
-
-/* Dark mode toggle button */
-button#dark-mode-toggle {
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border: none;
-  background-color: #555;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-button#dark-mode-toggle:hover {
-  background-color: #777;
-}
-/* Dark mode toggle button */
-button#dark-mode-toggle {
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border: none;
-  background-color: #555;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-button#dark-mode-toggle:hover {
-  background-color: #777;
-}
-
- <!-- Contact Me Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-cards">
-                <!-- Email Card -->
-                <div class="info-card">
-                    <div class="card-content">
-                        <div class="icon-container">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p>relebogile.chil@gmail.com</p>
-                        <a href="mailto:relebogile.chil@gmail.com">Send an Email</a>
-                    </div>
-                </div>
-                <!-- Phone Card -->
-                <div class="info-card">
-                    <div class="card-content">
-                        <div class="icon-container">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone</h3>
-                        <p>+27 61 494 4534</p>
-                        <a href="tel:+27614944534">Call Me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Relebogile Harrison Chiloane. All rights reserved.</p>
-        </div>
-    </footer>
-
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f5f5f7;
-    color: #000;
-}
-
-h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Hero Section */
-#hero {
-    background-color: #000;
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
-
-#hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-#hero .btn {
-    background-color: #0071e3;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-#hero .btn:hover {
-    background-color: #005bb5;
-}
-#about {
-    background-color: #f0f0f5;
-    padding: 60px 20px;
-    border-radius: 10px;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-#about p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* More Information Section */
-#more-info {
-    background-color: #fff;
-    padding: 80px 0;
-}
-
-#more-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #000;
-}
-
-.info-cards {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+  padding: 2em;
 }
 
 .info-card {
-    background-color: #f5f5f7;
-    width: 250px;
-    height: 250px;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    position: relative;
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 1em;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+/* GitHub Logo */
+.github-logo .circle {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
 }
 
-.info-card:hover .card-content {
-    opacity: 1;
+.github-logo .octocat {
+  width: 20px;
+  height: 20px;
+  background: white;
+  clip-path: polygon(50% 0%, 61% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 39% 38%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.icon-container {
-    font-size: 4rem;
-    color: #000;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+/* LinkedIn Logo */
+.linkedin-logo .circle {
+  width: 50px;
+  height: 50px;
+  background: #0077B5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.info-card:hover .icon-container {
-    transform: scale(1.2);
+.linkedin-logo .linkedin-text {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
-.info-card h3 {
-    font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 10px;
+/* Email Icon */
+.email-logo .envelope {
+  width: 40px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 3px;
+  position: relative;
 }
 
-.info-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-    padding: 0 10px;
+.email-logo .envelope:before,
+.email-logo .envelope:after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  background: black;
+  top: -1px;
+  left: 2px;
+  transform: rotate(45deg);
 }
 
-.info-card a {
-    text-decoration: none;
-    color: #0071e3;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.email-logo .envelope:before {
+  transform: rotate(-45deg);
 }
 
-.info-card a:hover {
-    color: #005bb5;
+/* Phone Icon */
+.phone-logo .phone-body {
+  width: 30px;
+  height: 50px;
+  background: black;
+  border-radius: 10px;
+  position: relative;
 }
 
-/* Contact Me Section */
-#contact {
-    background-color: #f5f5f7;
-    padding: 80px 0;
+.phone-logo .phone-body:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: white;
+  top: 5px;
+  left: 5px;
+  border-radius: 2px;
 }
 
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: #000;
+.phone-logo .phone-body:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 4px;
+  background: white;
+  bottom: 5px;
+  left: 10px;
+  border-radius: 2px;
 }
-
-.contact-cards {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
