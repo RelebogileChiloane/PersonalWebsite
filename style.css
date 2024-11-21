@@ -19,90 +19,203 @@ body.dark-mode {
     top: 0;
     background: #0077B5;
     z-index: 1000;
-    padding: 10px 0;
 }
 
 .sticky-nav ul {
-    margin: 0;
+    list-style-type: none;
     padding: 0;
-    list-style: none;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.sticky-nav ul li {
-    display: inline;
+.sticky-nav li {
     margin: 0 15px;
 }
 
-.sticky-nav ul li a {
-    color: white;
+.sticky-nav a {
     text-decoration: none;
+    color: white;
     font-weight: bold;
 }
 
-/* Project Section */
+/* Dark Mode Icon */
+.dark-mode-icon.moon-icon {
+    /* Moon icon styling */
+    cursor: pointer;
+}
+
+.dark-mode-icon.sun-icon {
+    /* Sun icon styling */
+    cursor: pointer;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0077B5;
+    color: white;
+}
+
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+/* Education Section */
+#education {
+    background: #f4f4f4;
+    padding: 40px 20px;
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* Projects Section */
+#projects {
+    background: #fff;
+    padding: 40px 20px;
+}
+
 .project-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.card-front, .card-back {
-    padding: 15px;
+    cursor: pointer;
 }
 
 .card-front img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-front h3 {
+    text-align: center;
+    margin: 10px 0;
 }
 
 .card-back {
-    display: none;
-}
-
-.project-card:hover .card-back {
-    display: block;
-}
-
-/* Info Section */
-.info-card {
-    width: 200px;
     padding: 20px;
+    display: none;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-back h3 {
+    margin: 0 0 10px 0;
+}
+
+.card-back a {
+    margin-right: 10px;
+}
+
+/* Contact and More Info Section */
+.contact-cards, .more-info-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.info-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
     text-align: center;
-    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.github-logo, .linkedin-logo {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    margin: 0 auto 10px;
+.info-card h3 {
+    margin: 10px 0;
 }
 
-.github-logo {
-    background-image: url('github-logo.png');
+.info-card a {
+    text-decoration: none;
+    color: #0077B5;
+    font-weight: bold;
 }
 
-.linkedin-logo {
-    background-image: url('linkedin-logo.png');
-}
-
-/* Footer */
+/* Footer Section */
 footer {
     background-color: black;
     color: white;
-    text-align: center;
     padding: 20px;
-    border-top: 5px solid white;
-    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+/* YouTube Section */
+#youtube {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.youtube-video iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-cards, .more-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .sticky-nav ul {
+        flex-direction: column;
+    }
+
+    .sticky-nav li {
+        margin: 10px 0;
+    }
 }
