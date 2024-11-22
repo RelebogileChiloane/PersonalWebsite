@@ -27,3 +27,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+  <!-- JavaScript -->
+  <script>
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    darkModeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        darkModeToggle.classList.remove("moon-icon");
+        darkModeToggle.classList.add("sun-icon");
+      } else {
+        darkModeToggle.classList.remove("sun-icon");
+        darkModeToggle.classList.add("moon-icon");
+      }
+    });
+  </script>
